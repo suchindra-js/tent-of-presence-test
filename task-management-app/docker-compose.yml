@@ -23,6 +23,8 @@ services:
       POSTGRES_DB: taskdb
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./database/migrations:/migrations:ro
+      - ./database/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh:ro
     ports:
       - "5432:5432"
 
