@@ -1,0 +1,2 @@
+# Docker Compose env (copy from .env.example, do not commit)
+.env
